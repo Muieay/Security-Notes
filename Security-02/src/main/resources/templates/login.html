@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<style>
+    input[type="text"],input[type="password"]{
+        line-height: 48px;
+        margin-top: 10px;
+        width: 100%;
+    }
+    input[type="submit"]{
+        width: 100%;
+        margin-top: 10px;
+    }
+    div{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        background-color: #5fde81;
+    }
+</style>
+<body>
+    <div>
+        <form method="post">
+            <input type="text" placeholder="用户名" name="user">
+            <input type="text" placeholder="密码" name="pwd">
+            <input type="checkbox" name="remember"> 记住我
+            <input type="submit" value="登陆">
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+<style type="text/css">
+    header{
+        width: 100%;/*这是设置宽,100%的意思是撑满屏幕*/
+        height: 35px;/*这是设置高*/
+        background-color: black;/*这是header标签的背景颜色*/
+        color: white;/*这是字体颜色*/
+        text-align:center;/*这是文字居中*/
+        line-height: 35px;
+    }
+</style>
