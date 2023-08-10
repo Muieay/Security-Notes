@@ -1,0 +1,26 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mui_book?serverTimezone=UTC&userUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: "000000"
+  security:
+    jwt:
+      key: "HELLO123"
+      expires: 7
+  redis:
+    port: 6379
+    host: localhost
+    password: "000000"
+    database: 1
+    jedis:
+      # Redis连接池配置
+      pool:
+        max-active: 8   #最大连接数
+        max-wait: 1ms
+        max-idle: 4    #最大空闲时间
+        min-idle: 0
+
