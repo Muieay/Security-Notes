@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
 
+    // 创建BCryptPasswordEncoder对象
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();

@@ -55,13 +55,13 @@ export default {
         },
         login(){
             if (this.userinfo.username == ''){
-                localStorage.removeItem('jwt-token')
+                localStorage.removeItem('verify')
                 this.$router.push('/login')
             }
         },
         logout(){
-            localStorage.removeItem('jwt-token')
-            this.$router.push('/login')
+            localStorage.removeItem('verify')
+            this.$router.push('/api/auth/logout')
         }
     }
 }

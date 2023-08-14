@@ -76,6 +76,7 @@ public class SecurityConfig {
                 .sessionManagement(conf->conf.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 //添加过滤器
                 .addFilterBefore(jwtAuthorizeFilter, UsernamePasswordAuthenticationFilter.class)
+                //.cors().and()
                 .build();
     }
 

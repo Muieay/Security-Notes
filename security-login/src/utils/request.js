@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const http=axios.create({
-    baseURL:'http://localhost:8082',     //通用后端请求地址前缀
+    baseURL:'http://localhost:8083/api',     //通用后端请求地址前缀
     timeout:10000  //超时时间（毫秒)
 })
 
