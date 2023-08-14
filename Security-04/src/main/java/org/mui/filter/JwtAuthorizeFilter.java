@@ -35,12 +35,6 @@ public class JwtAuthorizeFilter extends OncePerRequestFilter {
         DecodedJWT jwt = jwtUtils.resolveJwt(authorization);
 
         // 如果JWT不为空，则将JWT转换为UserDetails
-        if (jwt!= null) {
-            UserDetails user = jwtUtils.toUser(jwt);
-            // 创建UsernamePasswordAuthenticationToken对象
-            UsernamePasswordAuthenticationToken authentication =
-                    new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
-
         if (jwt != null) {
             UserDetails user = jwtUtils.toUser(jwt);
             UsernamePasswordAuthenticationToken authentication =
@@ -57,3 +51,4 @@ public class JwtAuthorizeFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 }
+
